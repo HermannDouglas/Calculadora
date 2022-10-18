@@ -20,7 +20,7 @@ def calcular():
         print('{} * {} = '.format(numero_1, numero_2))
         print(numero_1 * numero_2)
     elif operacao == '/':
-        if numero_1 ==0 and numero_2 == 0:
+        if numero_1 == 0 and numero_2 == 0:
             print('Erro de divisao de ZERO por ZERO.')
         elif numero_2 == 0:
             print('Erro de divisão por ZERO.')
