@@ -1,44 +1,46 @@
-def calculate():
-    operation = input('''
-    Please type in the math operation you would like to complete:
-    + for addition
-    - for subtraction 
-    * for multiplication
-    / for divisio
+def calcular():
+    operacao = input('''
+    Digite a operação matemática que deseja concluir:
+     + para adição
+     - para subtração
+     * para multiplicação
+     / para divisão
     ''')
 
-    number_1 = int(input('Enter your first number:'))
-    number_2 = int(input('Enter your second number: '))
+    numero_1 = int(input('Digite seu primeiro número:'))
+    numero_2 = int(input('Digite seu segundo número: '))
 
-    if operation == '+':
-        print('{} + {} = '.format(number_1, number_2))
-        print(number_1 + number_2)
-    elif operation == '-':
-        print('{} - {} = '.format(number_1, number_2))
-        print(number_1 - number_2)
-    elif operation == '*':
-        print('{} * {} = '.format(number_1, number_2))
-        print(number_1 * number_2)
-    elif operation == '*':
-        print('{} * {} = '.format(number_1, number_2))
-        print(number_1 / number_2)
+    if operacao == '+':
+        print('{} + {} = '.format(numero_1, numero_2))
+        print(numero_1 + numero_2)
+    elif operacao == '-':
+        print('{} - {} = '.format(numero_1, numero_2))
+        print(numero_1 - numero_2)
+    elif operacao == '*':
+        print('{} * {} = '.format(numero_1, numero_2))
+        print(numero_1 * numero_2)
+    elif operacao == '*':
+        print('{} * {} = '.format(numero_1, numero_2))
+        print(numero_1 / numero_2)
     else:
-        print('You have not type a valid operator, please run the program again.')
+        print('Você não digitou um operador válido, execute o programa novamente.')
 
-    # Add again() function to calculate() function
+    # Adicione a função again() à função calculate()
     again()
+
 
 def again():
     calc_again = input('''
-                do you want to calculate again?
-                Please type Y for YES ir N for NO.
+                Deseja calcular novamente?
+                Digite S para SIM ou N para NÃO.
                 ''')
 
-    if calc_again.upper() == 'Y':   
-        calculate()
+    if calc_again.upper() == 'S': 
+        calcular()
     elif calc_again.upper() == 'N':
-        print('See you later.')
+        print('Até logo.')
     else:
         again()
 
-calculate()
+
+calcular()
