@@ -19,9 +19,14 @@ def calcular():
     elif operacao == '*':
         print('{} * {} = '.format(numero_1, numero_2))
         print(numero_1 * numero_2)
-    elif operacao == '*':
-        print('{} * {} = '.format(numero_1, numero_2))
-        print(numero_1 / numero_2)
+    elif operacao == '/':
+        if numero_1 ==0 and numero_2 == 0:
+            print('Erro de divisao de ZERO por ZERO.')
+        elif numero_2 == 0:
+            print('Erro de divisão por ZERO.')
+        else:
+            print('{} / {} = '.format(numero_1, numero_2))
+            print(numero_1 / numero_2)
     else:
         print('Você não digitou um operador válido, execute o programa novamente.')
 
@@ -35,7 +40,7 @@ def again():
                 Digite S para SIM ou N para NÃO.
                 ''')
 
-    if calc_again.upper() == 'S': 
+    if calc_again.upper() == 'S':
         calcular()
     elif calc_again.upper() == 'N':
         print('Até logo.')
